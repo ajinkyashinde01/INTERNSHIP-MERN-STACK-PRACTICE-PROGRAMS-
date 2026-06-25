@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.box{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 10px auto;
+    background-color: gray;
+}
+</style>
+</head>
+<body>
+
+<div class="box" id="box1"></div>
+<div class="box" id="box2"></div>
+<div class="box" id="box3"></div>
+
+<script>
+let b1 = document.getElementById("box1");
+let b2 = document.getElementById("box2");
+let b3 = document.getElementById("box3");
+
+function resetLights() {
+    b1.style.background = "gray";
+    b2.style.background = "gray";
+    b3.style.background = "gray";
+}
+
+b1.addEventListener("click", function() {
+    resetLights();
+    b1.style.background = "red";
+});
+
+b2.addEventListener("click", function() {
+    resetLights();
+    b2.style.background = "yellow";
+});
+
+b3.addEventListener("click", function() {
+    resetLights();
+    b3.style.background = "green";
+});
+</script>
+
+</body>
+</html>

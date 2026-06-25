@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #de349f04;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input, select {
+            padding: 10px;
+            width: 250px;
+            margin-bottom: 20px;
+            border: 2px solid gray;
+            border-radius: 8px;
+        }
+
+        button {
+            background: black;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            width: 250px;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin: 10px 0;
+            color: #222;
+        }
+
+        .card h3 {
+            font-size: 16px;
+            color: gray;
+        }
+
+        .card h4 {
+            color: green;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Product List</h1>
+
+    <input type="text" id="search" placeholder="Search Product..." onkeyup="searchProduct()">
+    <button onclick="searchProduct()">Search</button>
+
+    <select id="sort" onchange="sortProduct()">
+        <option value="">Sort By</option>
+        <option value="low">Price Low → High</option>
+        <option value="high">Price High → Low</option>
+    </select>
+
+    <div id="container"></div>
+
+    <script>
+        let card = document.getElementById("container");
+        let search = document.getElementById("search");
+
+        let products = [
+            {
+                pname: "Watch",
+                cname: "Titan",
+                price: 4000,
+                img: "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw14b2658f/images/Titan/Catalog/1696QC06_1.jpg"
+            },
+            {
+                pname: "Laptop",
+                cname: "Asus Vivobook",
+                price: 200000,
+                img: "https://tse4.mm.bing.net/th/id/OIP.rmnSVla41A4qq8YmZQY7qgHaEK?pid=Api&h=220&P=0"
+            },
+            {
+                pname: "Headphone",
+                cname: "Boat",
+                price: 2000,
+                img: "https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/products/pictures/item/free/original/NmlfuviAiz-boat-rockerz-450-r-headphone-headsets-492338707-i-1-1200wx1200h.jpeg"
+            },
+            {
+                pname: "Mobile",
+                cname: "Samsung",
+                price: 24000,
+                img: "https://sammyguru.com/wp-content/uploads/2025/12/Galaxy_A17_5G_Blue.png"
+            }
+        ];
+
+        function display(list) {
+            card.innerHTML = "";
+
+            list.forEach((val) => {
+                card.innerHTML += `
+                <div class="card">
+                    <img src="${val.img}" alt="">
+                    <h2>Product Name: ${val.pname}</h2>
+                    <h3>Company Name: ${val.cname}</h3>
+                    <h4>Price: ₹${val.price}</h4>
+                    <button onclick="alert('Buying ${val.pname}')">Buy Now</button>
+                </div>
+                `;
+            });
+        }
+
+        function getProduct() {
+            display(products);
+        }
+
+        function searchProduct() {
+            let searchval = search.value.toLowerCase();
+
+            let filtered = products.filter((pr) =>
+                pr.pname.toLowerCase().includes(searchval)
+            );
+
+            display(filtered);
+        }
+
+        function sortProduct() {
+            let value = document.getElementById("sort").value;
+            let sorted = [...products];
+
+            if (value == "low") {
+                sorted.sort((a, b) => a.price - b.price);
+            }
+
+            if (value == "high") {
+                sorted.sort((a, b) => b.price - a.price);
+            }
+
+            display(sorted);
+        }
+
+        getProduct();
+    </script>
+
+</body>
+</html>
