@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<style>
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background:#eee;
+}
+
+.emoji{
+  width:200px;
+  height:200px;
+  background:yellow;
+  border-radius:50%;
+  position:relative;
+  border:3px solid black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  animation: move 2s infinite;
+}
+
+.emoji.red{
+  background:red;
+}
+
+.eye{
+  width:25px;
+  height:25px;
+  background:black;
+  border-radius:50%;
+  margin:15px;
+  transition:0.3s;
+}
+
+.emoji:hover .eye{
+  transform:translateY(-10px);
+}
+
+.mouth{
+  width:60px;
+  height:25px;
+  background:black;
+  border-radius:0 0 40px 40px;
+  position:absolute;
+  bottom:40px;
+}
+
+.mouth:active{
+  height:35px;
+}
+
+@keyframes move{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+  100%{transform:translateY(0);}
+}
+</style>
+</head>
+<body>
+
+<div class="emoji" id="face">
+  <div class="eye"></div>
+  <div class="eye"></div>
+  <div class="mouth"></div>
+</div>
+
+<script>
+document.getElementById("face").addEventListener("dblclick", function(){
+  this.classList.toggle("red");
+});
+</script>
+
+</body>
+</html>
