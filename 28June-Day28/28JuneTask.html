@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Navbar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ffe8ec,#f6e5ff,#edf5ff);
+    min-height:100vh;
+}
+
+/* Navbar */
+nav{
+    width:100%;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,0.8);
+    backdrop-filter:blur(20px);
+    position:fixed;
+    top:0;
+    left:0;
+}
+
+/* Logo */
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#845ef7;
+}
+
+/* Menu */
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.nav-links li a{
+    text-decoration:none;
+    color:#444;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links li a:hover{
+    color:#845ef7;
+}
+
+/* Buttons */
+.right{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:10px;
+    font-weight:500;
+}
+
+.login{
+    border:2px solid #845ef7;
+    color:#845ef7;
+}
+
+.signup{
+    background:#845ef7;
+    color:white;
+}
+
+/* Hamburger */
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* Mobile */
+@media(max-width:768px){
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:white;
+        padding:20px;
+        text-align:center;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .right{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">AJINKYA.dev</div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="right">
+        <a href="#" class="btn login">Login</a>
+        <a href="#" class="btn signup">Get Started</a>
+    </div>
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</nav>
+
+<script>
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
