@@ -1,0 +1,5 @@
+Goals:
+1. Become a Full Stack MERN Developer.
+2. Learn DevOps tools like Git.
+3. Improve problem-solving and coding skills.
+4. Continuously learn new technologies and build real-world projects.

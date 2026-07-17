@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+  margin:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background:#eee;
+}
+
+.instagram{
+  width:200px;
+  height:200px;
+  background: linear-gradient(
+    45deg,
+    yellow,
+    orange,
+    red,
+    purple,
+    blue
+  );
+  border-radius:40px;
+  position:relative;
+}
+
+.box{
+  width:120px;
+  height:120px;
+  border:10px solid white;
+  border-radius:30px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.circle{
+  width:50px;
+  height:50px;
+  border:10px solid white;
+  border-radius:50%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.dot{
+  width:15px;
+  height:15px;
+  background:white;
+  border-radius:50%;
+  position:absolute;
+  top:20px;
+  right:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="instagram">
+  <div class="box">
+    <div class="circle"></div>
+    <div class="dot"></div>
+  </div>
+</div>
+
+</body>
+</html>

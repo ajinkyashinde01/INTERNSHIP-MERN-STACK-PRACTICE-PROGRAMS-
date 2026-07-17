@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Card</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #a7e4f7, #d9f3fc);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.card{
+    width:850px;
+    max-width:95%;
+    background:white;
+    border-radius:25px;
+    position:relative;
+    padding:40px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.circle{
+    width:250px;
+    height:250px;
+    background:#6d8ff5;
+    border-radius:50%;
+    position:absolute;
+    top:-80px;
+    right:-80px;
+}
+
+.profile{
+    position:absolute;
+    top:50px;
+    left:40px;
+}
+
+.profile img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:8px solid white;
+    object-fit:cover;
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+.content{
+    margin-left:240px;
+    padding-top:20px;
+}
+
+.content h1{
+    font-size:42px;
+    color:#222;
+}
+
+.content h3{
+    font-size:22px;
+    margin-top:8px;
+    color:#666;
+}
+
+.content p{
+    margin-top:25px;
+    font-size:20px;
+    line-height:32px;
+    color:#444;
+    max-width:500px;
+}
+
+.stats{
+    display:flex;
+    gap:60px;
+    margin-top:35px;
+}
+
+.stats h2{
+    font-size:30px;
+}
+
+.stats span{
+    font-size:18px;
+    color:#666;
+}
+
+.buttons{
+    margin-top:40px;
+    display:flex;
+    gap:20px;
+}
+
+button{
+    padding:15px 35px;
+    font-size:18px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.follow{
+    background:black;
+    color:white;
+    border:none;
+}
+
+.follow:hover{
+    background:#333;
+}
+
+.profile-btn{
+    background:transparent;
+    border:2px solid black;
+}
+
+.profile-btn:hover{
+    background:black;
+    color:white;
+}
+
+@media(max-width:768px){
+    .card{
+        text-align:center;
+        padding:30px;
+    }
+
+    .profile{
+        position:static;
+        margin-bottom:20px;
+    }
+
+    .content{
+        margin-left:0;
+    }
+
+    .stats{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:25px;
+    }
+
+    .buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+
+    <div class="circle"></div>
+
+    <div class="profile">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile">
+    </div>
+
+    <div class="content">
+        <h1>Bradley Steve</h1>
+        <h3>@bradsteve</h3>
+
+        <p>
+            I'm a Front End Developer, follow me to be the 
+            first who sees my new work.
+        </p>
+
+        <div class="stats">
+            <div>
+                <h2>15K</h2>
+                <span>Views</span>
+            </div>
+            <div>
+                <h2>82</h2>
+                <span>Projects</span>
+            </div>
+            <div>
+                <h2>1.3M</h2>
+                <span>Followers</span>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="follow">Follow</button>
+            <button class="profile-btn">View Profile</button>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

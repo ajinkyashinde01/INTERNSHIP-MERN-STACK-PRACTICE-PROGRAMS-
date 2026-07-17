@@ -1,0 +1,8 @@
+Skills:
+- C Programming Language,
+- C++,
+- Java,
+- Python,
+- Javascript,
+- Html,
+- Css

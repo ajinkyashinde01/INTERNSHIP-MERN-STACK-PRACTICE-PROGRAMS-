@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Greeting</title>
+</head>
+<body>
+
+    <h1>Employee Greeting</h1>
+
+    Employee ID:
+    <input type="text" id="empId"><br><br>
+
+    Employee Name:
+    <input type="text" id="empName"><br><br>
+
+    Time:
+    <select id="hour">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+    </select>
+
+    <select id="period">
+        <option>AM</option>
+        <option>PM</option>
+    </select>
+
+    <br><br>
+    <button onclick="showGreeting()">Show Greeting</button>
+
+    <div id="result"></div>
+
+    <script>
+        function showGreeting() {
+            let id = document.getElementById("empId").value;
+            let name = document.getElementById("empName").value;
+            let hour = parseInt(document.getElementById("hour").value);
+            let period = document.getElementById("period").value;
+            let greeting = "";
+
+            // Convert to 24-hour format
+            if (period == "PM" && hour != 12) {
+                hour += 12;
+            }
+            if (period == "AM" && hour == 12) {
+                hour = 0;
+            }
+
+            if (hour < 12) {
+                greeting = "Good Morning";
+            } 
+            else if (hour < 5) {
+                greeting = "Good Afternoon";
+            } 
+            else if (hour < 8) {
+                greeting = "Good Evening";
+            } 
+            else {
+                greeting = "Good Night";
+            }
+
+            document.getElementById("result").innerHTML =
+                "<h2>" + greeting + ", " + name + "</h2>" +
+                "<p>Employee ID: " + id + "</p>" +
+                "<p>Employee Name: " + name + "</p>" +
+                "<p>Time In: " + hour + " " + period + "</p>";
+        }
+    </script>
+
+</body>
+</html>

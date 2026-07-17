@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Square Spiral</title>
+
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #edf5e8;
+        }
+
+        .container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+
+        .square {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 2px solid #555;
+            transform: translate(-50%, -50%);
+            animation: spin 6s linear infinite;
+        }
+
+        .square:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            animation-delay: 0s;
+        }
+
+        .square:nth-child(2) {
+            width: 250px;
+            height: 250px;
+            animation-delay: -0.5s;
+        }
+
+        .square:nth-child(3) {
+            width: 200px;
+            height: 200px;
+            animation-delay: -1s;
+        }
+
+        .square:nth-child(4) {
+            width: 150px;
+            height: 150px;
+            animation-delay: -1.5s;
+        }
+
+        .square:nth-child(5) {
+            width: 100px;
+            height: 100px;
+            animation-delay: -2s;
+        }
+
+        .square:nth-child(6) {
+            width: 50px;
+            height: 50px;
+            animation-delay: -2.5s;
+        }
+
+        @keyframes spin {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+
+</body>
+
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> af86ef6 (Updated project files)

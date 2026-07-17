@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="15JUNEstyle.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>To Do App</h1>
+
+    <input type="text" id="todo" placeholder="Enter a task">
+    <button onclick="addTodo()">Add</button>
+
+    <ul id="todolist"></ul>
+</div>
+
+<script>
+    let arr = [];
+    let task = document.getElementById("todo");
+    let list = document.getElementById("todolist");
+
+    function addTodo() {
+        if (task.value == "") return;
+
+        arr.push({
+            text: task.value,
+            completed: false
+        });
+
+        task.value = "";
+        renderTodo();
+    }
+
+    function toggleTodo(index) {
+        arr[index].completed = !arr[index].completed;
+        renderTodo();
+    }
+
+    function deleteTodo(index) {
+        arr.splice(index, 1);
+        renderTodo();
+    }
+
+    function renderTodo() {
+        list.innerHTML = "";
+
+        arr.forEach((val, index) => {
+            list.innerHTML += `
+                <li class="${val.completed ? 'done' : ''}">
+                    <span onclick="toggleTodo(${index})">
+                        ${val.completed ? '✔' : '○'} ${val.text}
+                    </span>
+                    <button onclick="deleteTodo(${index})">Delete</button>
+                </li>
+            `;
+        });
+    }
+</script>
+
+</body>
+</html>
