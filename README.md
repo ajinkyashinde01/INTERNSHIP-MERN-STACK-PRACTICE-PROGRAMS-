@@ -36,7 +36,6 @@ HTML → CSS → JavaScript → Git & GitHub → React.js → Node.js → Expres
 └── 📄 README.md
 ```
 
-
 ## 💻 Technologies
 
 HTML • CSS • JavaScript • React • Node.js • Express.js • MongoDB • Git • GitHub
