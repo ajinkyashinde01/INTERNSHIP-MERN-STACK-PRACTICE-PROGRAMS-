@@ -19,13 +19,23 @@ HTML → CSS → JavaScript → Git & GitHub → React.js → Node.js → Expres
 ## 📂 Repository Structure
 
 ```text
-
-
-
-
-
-
+📦 React-Learning
+├── 📁 06-2026
+│   ├── 📂 01June-Day1
+│   ├── 📂 02June-Day2
+│   ├── 📂 03June-Day3
+│   ├── 📂 ...
+│   └── 📂 30June-Day30
+│
+├── 📁 07-2026
+│   ├── 📂 01July-Day31
+│   ├── 📂 04July-Day32
+│   ├── 📂 ...
+│   └── 📂 20July-Day50
+│
+└── 📄 README.md
 ```
+
 
 ## 💻 Technologies
 
