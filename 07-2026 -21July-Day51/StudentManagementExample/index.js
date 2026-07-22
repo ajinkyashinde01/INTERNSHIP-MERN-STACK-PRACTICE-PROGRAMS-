@@ -5,7 +5,7 @@ student.insert("Aryan");
 
 student.display();
 
-student.update("Aryan" , "Pruthviraj");
+student.update("Aryan" , "Samarth");
 
 student.remove("Aryan");
 
