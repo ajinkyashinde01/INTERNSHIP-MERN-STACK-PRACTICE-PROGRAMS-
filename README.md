@@ -34,6 +34,9 @@ HTML → CSS → JavaScript → Git & GitHub → React.js → Node.js → Expres
 │   ├── 📂 ...
 │   └── 📂 31July-Day61
 │
+├── 📁 08-2026
+│   ├── 📂 01August-Day31
+│
 └── 📄 README.md
 ```
 
