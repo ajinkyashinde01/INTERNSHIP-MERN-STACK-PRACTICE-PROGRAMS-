@@ -36,6 +36,10 @@ HTML → CSS → JavaScript → Git & GitHub → React.js → Node.js → Expres
 │
 ├── 📁 08-2026
 │   ├── 📂 01August-Day62
+│   ├── 📂 02August-Day63
+│   ├── 📂 03August-Day64
+│   ├── 📂 ...
+│   └── 📂 31August-Day92
 │
 └── 📄 README.md
 ```
