@@ -7,7 +7,7 @@ My daily learning and development during the MERN Internship.
 | Internship    | MERN Development          |
 | ------------- | ------------------------- |
 | Duration      | June 2026 – August 2026   |
-| Current Phase | React.js                  |
+| Current Phase | Project Development       |
 | Repository    | Daily Practice & Projects |
 
 ## 🚀 Learning Path
