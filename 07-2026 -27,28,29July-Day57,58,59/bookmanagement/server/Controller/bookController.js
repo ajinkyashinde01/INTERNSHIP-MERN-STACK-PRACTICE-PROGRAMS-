@@ -32,6 +32,17 @@ const handleDeleteBookController = async (req, res) => {
   }
 };
 
+const handleUpdateBookController = async (req, res) => {
+  try {
+    const data = req.body
+    const updatedDetails = await Book.updateOne({_id: data._id}, {$set: data})
+ 
+    return res.status(200).json({ Message: " Book Details Updated successfully"});
+  } catch (err) {
+    return res.status(500).json({ Message: err.message });
+  }
+};
 
 
-module.exports = { handleAddBookController , handleGetAllBookController, handleDeleteBookController};
+
+module.exports = { handleAddBookController , handleGetAllBookController, handleDeleteBookController, handleUpdateBookController};
