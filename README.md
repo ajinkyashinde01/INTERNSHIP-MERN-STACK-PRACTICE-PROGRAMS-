@@ -19,7 +19,7 @@ HTML → CSS → JavaScript → Git & GitHub → React.js → Node.js → Expres
 ## 📂 Repository Structure
 
 ```text
-📦 React-Learning
+📦 Project Development
 ├── 📁 06-2026
 │   ├── 📂 01June-Day1
 │   ├── 📂 02June-Day2
